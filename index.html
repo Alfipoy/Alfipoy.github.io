@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Alfi.ID</title>
+  </head>
+  <body class="body">
+    <!--START PRELOADER-->
+    <div class="preloader">
+      <div class="loading">
+        <div class="line"></div>
+        <p>Loading</p>
+      </div>
+    </div>
+    <!--END PRELOADER-->
+
+    <!--START TITLEBAR-->
+    <nav class="navbar ">
+      <div class="container">
+        <h2>Profile</h2>
+      </div>
+    </nav>
+    <!--END TITLEBAR-->
+
+    <!--START CONTENT-->
+    <div class="content">
+      <div class="border_image">
+        <img class="foto" src="image/user-profile.png" alt="User Profile">
+      </div>
+      <div class="text">
+        <p class="alfi">Alfi</p>
+        <div class="strip"></div>
+        <p class="info">Programmer Android & Backend</p>
+      </div>
+
+      <!--START BAR NAV-->
+      <nav class="navbar-content">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-project-tab" data-bs-toggle="pill" data-bs-target="#pills-project" type="button" role="tab" aria-controls="pills-project" aria-selected="false">Projects</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="true">Profile</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+          </li>
+        </ul>
+      </nav>
+      <!--END BAR NAV-->
+      <!--START NAV CONTENT-->
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade" id="pills-project" role="tabpanel" aria-labelledby="pills-project-tab">.project..</div>
+        <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">.profile..</div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">.contact..</div>
+      </div>
+      <!--END NAV CONTENT-->
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script href="js.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script>
+      //PRELOADER FUNCTION
+      $(document).ready(function(){
+    $(".preloader").fadeOut();
+    });
+
+   //NAVIGASI BAR FUNCTION
+    $(document).ready(function() {
+    $('#pills-project-tab').click(function() {
+        $('#pills-project-tab').addClass('shadow');
+        $('#pills-profile-tab').removeClass('shadow');
+        $('#pills-contact-tab').removeClass('shadow');
+        $('#pills-project-tab').attr('style','-webkit-text-fill-color: white;');
+        $('#pills-profile-tab').attr('style','-webkit-text-fill-color: black;');
+        $('#pills-contact-tab').attr('style','-webkit-text-fill-color: black;');
+    });
+});
+$(document).ready(function() {
+    $('#pills-profile-tab').click(function() {
+      $('#pills-profile-tab').addClass('shadow');
+        $('#pills-project-tab').removeClass('shadow');
+        $('#pills-contact-tab').removeClass('shadow');
+        $('#pills-profile-tab').attr('style','-webkit-text-fill-color: white;');
+        $('#pills-project-tab').attr('style','-webkit-text-fill-color: black;');
+        $('#pills-contact-tab').attr('style','-webkit-text-fill-color: black;');
+    });
+});
+$(document).ready(function() {
+    $('#pills-contact-tab').click(function() {
+      $('#pills-contact-tab').addClass('shadow');
+        $('#pills-profile-tab').removeClass('shadow');
+        $('#pills-project-tab').removeClass('shadow');
+        $('#pills-contact-tab').attr('style','-webkit-text-fill-color: white;');
+        $('#pills-project-tab').attr('style','-webkit-text-fill-color: black;');
+        $('#pills-profile-tab').attr('style','-webkit-text-fill-color: black;');
+    });
+});
+    </script>
+  </body>
+</html>
+<style>
+  .shadow {
+    box-shadow: 7px 7px 25px 7px #888888;
+  }
+</style>

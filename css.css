@@ -1,0 +1,143 @@
+* {
+  margin: 0 auto;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.body {
+  background: #f7f7f7;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: linear-gradient(
+    146deg,
+    rgba(59, 50, 247, 1) 0%,
+    rgba(115, 172, 255, 1) 38%,
+    rgba(29, 217, 255, 1) 100%
+  );
+}
+.preloader .loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+.loading,
+p {
+  background-color: transparent;
+}
+.line {
+  height: 3px;
+  width: 3px;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: -40%;
+  transform: translate(-50%, -50%);
+  animation-name: line;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes line {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 200px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+.navbar {
+  background: linear-gradient(
+    180deg,
+    rgba(40, 30, 223, 1) 0%,
+    rgba(48, 48, 227, 1) 33%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border-right: 1px solid grey;
+  border-left: 1px solid grey;
+  border-top: 0.3px solid grey;
+  border-bottom: 1px solid grey;
+  box-shadow: 1px 1px 20px 5px #888888;
+}
+.container,
+h2 {
+  background: transparent;
+}
+
+h2 {
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: grey;
+}
+/*START PHONE LAYOUT*/
+@media (max-width: 576px) {
+  .content {
+    width: auto;
+    height: 900px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: white;
+    margin-top: -50px;
+    padding-top: 50px;
+    box-shadow: 1px 1px 15px 3px #888888;
+  }
+  .border_image {
+    background: linear-gradient(
+      180deg,
+      rgba(29, 217, 255, 1) 23%,
+      rgba(150, 237, 255, 1) 52%,
+      rgba(228, 250, 255, 1) 75%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 190px;
+    height: 170px;
+    border: 0.3px solid grey;
+    left: 50%;
+    right: 50%;
+    border-radius: 15px 40px;
+    box-shadow: 7px 7px 25px 3px #888888;
+    margin-bottom: 30px;
+  }
+  .foto {
+    border: 0.3px solid grey;
+    width: 160px;
+    height: 160px;
+    background: transparent;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .nav-link {
+    -webkit-text-fill-color: black;
+  }
+  .text {
+    text-align: center;
+    margin: 0 auto;
+    width: 200px;
+    height: 70px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+  }
+
+  .alfi {
+    margin-bottom: -1px;
+  }
+  .strip {
+    width: auto;
+    height: 1px;
+    background: black;
+  }
+}
+/*END PHONE LAYOUT*/
